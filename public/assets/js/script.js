@@ -31,7 +31,7 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+});
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -42,7 +42,7 @@ const saveNote = (note) =>
     body: JSON.stringify(note),
 });
 
-const deleteNote = (id) =>
+const deleteNote = async (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
