@@ -1,14 +1,7 @@
 const router = require('express').Router();
 
-const fs = require('fs');
-const path = require('path');
+const notesRoute = require('./notesRoute');
 
-router.get('/notes', () => {
-
-});
-
-router.post('/notes', () => {
-
-});
+router.use(notesRoute);
 
 module.exports = router;
